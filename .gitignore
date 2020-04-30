@@ -1,0 +1,10 @@
+log
+logs
+model
+data
+downloads
+raw_data
+.ipynb_checkpoints
+*.zip
+*.7zip
+*.tar*
