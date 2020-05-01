@@ -22,7 +22,13 @@ The file **"01-preprocess.ipynb"** is responsible for this.
 
 I write a crawler using [icrawler](https://pypi.org/project/icrawler/) to search some specific phrases on the internet using Bing and download the images from people using and without using mask.
 
-The second step is to find the faces on the images and label them. For this process I did it in three steps.
+I also used a very google extension from chrome called [Download All Images](https://chrome.google.com/webstore/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm)
+
+It is not good to have and label duplicated images, as we have a lot of images to check looking at each one I searched for an automatic tool or script to remove duplicates images from the downloaded data. And as always I found an excelent one on Adrian's blog that works like a charm with a small change "[Detect and remove duplicate images from a dataset for deep learning by Adrian from PyImageSearch](https://www.pyimagesearch.com/2020/04/20/detect-and-remove-duplicate-images-from-a-dataset-for-deep-learning/)"
+
+The second step is to find the faces on the images and label them. 
+
+For this process I did it in three steps.
 - Automatically find faces using OpenCV face detector and check visually.
 - Select faces manually using Region of Interest from OpenCV.
 - Use LabelImg to manually do the annotation of bounding box containing images (the idea is to use them after to train a SSD detector)
@@ -48,8 +54,6 @@ The images are on a folder called **"data/train"** be aware of this.
 The file that did the training is the **02-train_mask_classifier.ipynb**
 
 The network was trained dusring 50 epochs and the final accuracy of around **90%** on the validation samples.
-
-IMAGE OF CONFUSION MATRIX
 
 ## Run
 
@@ -85,6 +89,8 @@ The models are in a folder called **"model"** and pre-trained model are on drive
 - Images from Internet
 
 - [Fine-tuning with Keras and Deep Learning by Adrian from PyImageSearch](https://www.pyimagesearch.com/2019/06/03/fine-tuning-with-keras-and-deep-learning/)
+
+- [Detect and remove duplicate images from a dataset for deep learning by Adrian from PyImageSearch](https://www.pyimagesearch.com/2020/04/20/detect-and-remove-duplicate-images-from-a-dataset-for-deep-learning/)
 
 - [WIDER FACE Dataset](http://shuoyang1213.me/WIDERFACE/)
 
