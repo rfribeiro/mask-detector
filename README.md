@@ -75,6 +75,7 @@ The models are in a folder called **"model"** and pre-trained model are on drive
 ## Improvements and drawnbacks
 
 - Label more images
+- Include no face images class to train when the detect faces send bad images
 - Improve accuracy performance
 - Use a better or train a new face detector (because of mask the performance is not so good)
 - Create a Android application
