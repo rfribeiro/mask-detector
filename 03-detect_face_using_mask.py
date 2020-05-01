@@ -13,6 +13,7 @@ from tensorflow.keras.models import load_model
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", type=str, help="path to our input image")
+ap.add_argument("-c", "--confidence", type=float, help="confidence threshold")
 args = vars(ap.parse_args())
 
 def show_webcam():
@@ -57,6 +58,8 @@ caffe_confidence = 0.30
 model_folder = './model/'
 mask_model = "mask_mobile_net.h5"
 
+if args["confidence"]:
+    caffe_confidence = args["confidence"]
 
 print("[INFO] loading model...")
 net = cv2.dnn.readNetFromCaffe(model_folder + caffe_model, 
