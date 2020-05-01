@@ -4,6 +4,9 @@ model
 data
 downloads
 raw_data
+detect-duplicate-dataset
+icrawler
+detect_and_remove.py
 .ipynb_checkpoints
 *.zip
 *.7zip
