@@ -102,9 +102,7 @@ def detect_face_cnn(image, save = False, show = False):
                     # predict mask or not
                     pred, pred_res = predict_mask(img_crop)
                     
-                    log_text = "Face Detection confidence:{:2}".format(round(confidence,2))
-                    log_text = log_text + ", mask detection:{:2}".format(pred_res)
-                    print(log_text)
+                    print("Face Detection confidence:{:2f}".format(round(confidence,2)), pred)
 
                     label = "MASK" if pred_res == 0 else "NO-MASK"
                     color = (0,255,0) if pred_res == 0 else (0,0,255)
