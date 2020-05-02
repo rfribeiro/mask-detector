@@ -5,9 +5,9 @@
 
 The Covid-19 changed our lives and has changed our habits and also because of it many of us entered social isolation.
 
-There are cities and places like marts, supermarkets, etc that it is an obligation to use mask when you are on the streets or inside them.
+There are cities that are an obligation to use a mask when you are on the streets and also places like marts, supermarkets, etc that you have to use masks when you are inside of them.
 
-Thinking about this problem, my idea is to create software to predict if a person is using a mask or not.
+Thinking about this problem, my idea is to create software to automatically detect if a person is using a mask or not.
 
 The objective of this project is to train a deep convolutional neural network on images collected from the internet to check if a person is using a mask or not.
 
@@ -21,7 +21,7 @@ In order to train a neural network, we need a lot of images of our target classe
 
 The first step is to collect images from the internet.
 
-I write a crawler using [icrawler](https://pypi.org/project/icrawler/) to search some specific phrases on the internet using Bing and download the images from people using and without using a mask.
+I write a crawler using [icrawler](https://pypi.org/project/icrawler/) to search some specific phrases on the internet using Bing and download the images from people using masks and without using it.
 
 I also used a google extension from chrome called  [Download All Images](https://chrome.google.com/webstore/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm)
 
@@ -41,8 +41,6 @@ The final dataset has 4297 masks and 4419 no-mask images for training and more i
 But as in all deep learning project the more images the better and if anyone like to help it will be very welcome. please contact me.
 
 I did not provide the dataset of images because I collect them scraping from the internet and I did not have time to check the copyright of all of them.
-
-In order to train a neural network we need a lot of images of our target classes and no other place to find images than iternet.
 
 The file **"01-preprocess.ipynb"** is responsible for this.
 
@@ -104,7 +102,7 @@ OR
 
 Run the **03-detect_face_using_mask.py** using **python 03-detect_face_using_mask.py** passing an image on the command line **--image** or the default will launch the webcam. 
 
-Please install the requirements before run the python script.
+Please install the requirements before running the python script.
 
 ``` shell
 conda install --yes --file requirements.txt
@@ -116,7 +114,7 @@ python 03-detect_face_using_mask.py
 
 I recorded a video with the mask detector in action and posted it on YouTube https://youtu.be/HqWSC5dwYYw
 
-The models are in a folder called **"model"** and pre-trained model are on drive folder [MODELS HERE!!](https://drive.google.com/open?id=1WNttcVDXo49R9hTG3P3J5iHB73dNTf2B)
+The models are in a folder called **"model"** and the pre-trained models are on drive folder [MODELS HERE!!](https://drive.google.com/open?id=1WNttcVDXo49R9hTG3P3J5iHB73dNTf2B)
 - res10_300x300_ssd_iter_140000.caffemodel
 - deploy.prototxt.txt
 - mask_mobile_net.h5
@@ -127,11 +125,11 @@ The models are in a folder called **"model"** and pre-trained model are on drive
 - Include no face images class to train when the detect faces send bad images
 - Improve accuracy performance
 - Use a better or train a new face detector (because of mask the performance is not so good)
-- Create a Android application
+- Create an Android application
 - Create a Web application
 
 ## References
-- Images from Internet
+- Images from the Internet
 
 - [Fine-tuning with Keras and Deep Learning by Adrian from PyImageSearch](https://www.pyimagesearch.com/2019/06/03/fine-tuning-with-keras-and-deep-learning/)
 
