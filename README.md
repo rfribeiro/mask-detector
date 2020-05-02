@@ -112,7 +112,7 @@ conda install --yes --file requirements.txt
 python 03-detect_face_using_mask.py
 ```
 
-![Mask Face Detector in Action](Mask_Detector_using_Deep_Learning.gif)
+![Mask Face Detector in Action](images/Mask_Detector_using_Deep_Learning.gif)
 
 I recorded a video with the mask detector in action and posted it on YouTube https://youtu.be/HqWSC5dwYYw
 
