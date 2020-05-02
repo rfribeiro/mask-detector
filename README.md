@@ -12,6 +12,7 @@ Thinking about this problem, my idea is to create software to automatically dete
 The objective of this project is to train a deep convolutional neural network on images collected from the internet to check if a person is using a mask or not.
 
 I used as reference the blog post ["Fine-tuning with Keras and Deep Learning"](https://www.pyimagesearch.com/2019/06/03/fine-tuning-with-keras-and-deep-learning/) from the guru of computer vision Adrian Rosebrock to train a new network using the transfer learning process.
+
 Finally, I use a two-step system to first **"detect"** faces on an image, using a trained face detector from OpenCV and after pass the found faces on the **"mask predictor"** that returns if the face is using a mask or not.
 
 
@@ -101,6 +102,10 @@ Please change the **SOURCE** variable to choose between them.
 OR
 
 Run the **03-detect_face_using_mask.py** using **python 03-detect_face_using_mask.py** passing an image on the command line **--image** or the default will launch the webcam. 
+
+The script uses two steps the first one to "detect" faces on the images and it uses the OpenCV library and after, all faces found pass to the "mask" predictor to check if it is using a mask or not.
+
+The script works with many faces on the screen/images.
 
 Please install the requirements before running the python script.
 
